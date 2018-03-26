@@ -4768,15 +4768,13 @@
   "ci-kubernetes-e2e-gci-gce-ingress": {
     "args": [
       "--check-leaked-resources",
-      "--env=GCE_ALPHA_FEATURES=NetworkEndpointGroup",
-      "--env=KUBE_GCE_ENABLE_IP_ALIASES=true",
       "--env-file=jobs/platform/gce.env",
       "--extract=ci/latest",
       "--gcp-node-image=gci",
       "--gcp-project-type=ingress-project",
-      "--gcp-zone=us-east2-a",
+      "--gcp-zone=us-central1-f",
       "--provider=gce",
-      "--test_args=--ginkgo.focus=\\[Feature:Ingress\\]|\\[Feature:NEG\\]",
+      "--test_args=--ginkgo.focus=\\[Feature:Ingress\\]",
       "--timeout=90m"
     ],
     "scenario": "kubernetes_e2e",
