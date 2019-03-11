@@ -516,9 +516,6 @@ test_groups:
   gcs_prefix: kubernetes-jenkins/logs/ci-kubernetes-e2e-gci-gke-serial
 - name: ci-kubernetes-e2e-gci-gke-slow
   gcs_prefix: kubernetes-jenkins/logs/ci-kubernetes-e2e-gci-gke-slow
-- name: ci-kubernetes-e2e-gci-gke-ingress
-  gcs_prefix: kubernetes-jenkins/logs/ci-kubernetes-e2e-gci-gke-ingress
-  alert_stale_results_hours: 24
 - name: ci-kubernetes-e2e-gci-gke-network-policy
   gcs_prefix: kubernetes-jenkins/logs/ci-kubernetes-e2e-gci-gke-network-policy
   alert_stale_results_hours: 24
@@ -4471,8 +4468,6 @@ dashboards:
     test_group_name: ci-kubernetes-e2e-gci-gke-serial
   - name: gci-gke-slow
     test_group_name: ci-kubernetes-e2e-gci-gke-slow
-  - name: gci-gke-ingress
-    test_group_name: ci-kubernetes-e2e-gci-gke-ingress
   - name: gci-gke-multizone
     test_group_name: ci-kubernetes-e2e-gci-gke-multizone
   - name: gke-regional
@@ -6264,10 +6259,6 @@ dashboards:
     description: network gci-gke alpha features e2e tests for master branch
     alert_options:
       alert_mail_to_addresses: kubernetes-sig-network-test-failures@googlegroups.com
-  - name: gci-gke-ingress
-    test_group_name: ci-kubernetes-e2e-gci-gke-ingress
-    alert_options:
-      alert_mail_to_addresses: kubernetes-sig-network-test-failures@googlegroups.com
   - name: gci-gke-network-policy
     test_group_name: ci-kubernetes-e2e-gci-gke-network-policy
     alert_options:
@@ -7012,12 +7003,6 @@ dashboards:
     - configuration_value: infra-commit
   - name: gci-gke-flaky
     test_group_name: ci-kubernetes-e2e-gci-gke-flaky
-    column_header:
-    - configuration_value: node_os_image
-    - configuration_value: Commit
-    - configuration_value: infra-commit
-  - name: gci-gke-ingress
-    test_group_name: ci-kubernetes-e2e-gci-gke-ingress
     column_header:
     - configuration_value: node_os_image
     - configuration_value: Commit
